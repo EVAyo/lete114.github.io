@@ -1,3 +1,5 @@
+https://blog.lete114.top/article/Java-random-num.html
+https://blog.lete114.top/article/SpringBoot-Thymeleaf-Random.html
 https://blog.lete114.top/article/SpringBoot-MyBatis-error-null.html
 https://blog.lete114.top/article/Thymeleaf-package-error.html
 https://blog.lete114.top/article/SpringBoot-Gzip.html

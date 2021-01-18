@@ -6,60 +6,33 @@
 <meta http-equiv="content-language" content="zh-CN">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<title>Hello World | Lete乐特's Blog</title>
+<title>SpringBoot-Thymeleaf随机数 | Lete乐特's Blog</title>
 <link rel="icon" href="/img/favicon.ico">
-<meta name="keywords" content="">
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
+<meta name="keywords" content="记录,Java,SpringBoot,Thymeleaf">
+<meta name="description" content="当使用SpringBoot写项目的时候，难免会遇到点问题，当然也可以直接在后台代码里设置随机数
+但总有些问题是你不得不在模板渲染时就处理好
+关键代码
+1$&#123;#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*255),1,0)&#125;
 " />
 <meta property="site_name" content="Lete乐特's Blog" />
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://blog.lete114.top/article/hello-world.html">
-<meta property="og:title" content="Hello World | Lete乐特's Blog" />
+<meta property="og:url" content="https://blog.lete114.top/article/SpringBoot-Thymeleaf-Random.html">
+<meta property="og:title" content="SpringBoot-Thymeleaf随机数 | Lete乐特's Blog" />
 <meta property="og:site_name" content="Lete乐特's Blog" />
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
+<meta property="og:description" content="当使用SpringBoot写项目的时候，难免会遇到点问题，当然也可以直接在后台代码里设置随机数
+但总有些问题是你不得不在模板渲染时就处理好
+关键代码
+1$&#123;#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*255),1,0)&#125;
 " />
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World | Lete乐特's Blog">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
+<meta name="twitter:title" content="SpringBoot-Thymeleaf随机数 | Lete乐特's Blog">
+<meta name="twitter:description" content="当使用SpringBoot写项目的时候，难免会遇到点问题，当然也可以直接在后台代码里设置随机数
+但总有些问题是你不得不在模板渲染时就处理好
+关键代码
+1$&#123;#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*255),1,0)&#125;
 ">
-<link rel="dns-prefetch" href="https://blog.lete114.top/article/hello-world.html">
+<link rel="dns-prefetch" href="https://blog.lete114.top/article/SpringBoot-Thymeleaf-Random.html">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
@@ -162,14 +135,14 @@ More info: Deployment
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
             <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
             <div class="post-title">
-              <h2 class="title">Hello World</h2>
+              <h2 class="title">SpringBoot-Thymeleaf随机数</h2>
             </div>
              
              <div class="post-meta">
                 <div class="meta-firstline">
                     <span class="post-meta-date">
                         <i class="far fa-calendar-alt fa-fw post-meta-icon"></i>
-                        <span class="post-meta-label">发表于 2020-04-15 | </span>
+                        <span class="post-meta-label">发表于 2021-01-18 | </span>
                         
                         <i class="fas fa-history fa-fw post-meta-icon"></i>
                         <span class="post-meta-label">更新于 2021-01-18</span>
@@ -179,12 +152,12 @@ More info: Deployment
                     <span class="post-meta-wordcount">
                         <i class="far fa-file-word fa-fw post-meta-icon"></i>
                         <span class="post-meta-label">字数总计:</span>
-                        <span class="word-count">75 | </span>
+                        <span class="word-count">79 | </span>
                         <i class="far fa-clock fa-fw post-meta-icon"></i>
                         <span class="post-meta-label">阅读时长:</span>
                         <span>1分钟 | </span>
                         <i class="far fa-eye fa-fw post-meta-icon"></i>
-                        <span id="/article/hello-world.html" class="leancloud_visitors">
+                        <span id="/article/SpringBoot-Thymeleaf-Random.html" class="leancloud_visitors">
                             <span class="post-meta-label">阅读量:</span>
                             <span class="leancloud-visitors-count" id="twikoo_visitors">0</span>
                         </span>
@@ -193,19 +166,10 @@ More info: Deployment
             </div>
              
             <div class="post-content">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <p>当使用SpringBoot写项目的时候，难免会遇到点问题，当然也可以直接在后台代码里设置随机数</p>
+<p>但总有些问题是你不得不在模板渲染时就处理好</p>
+<p>关键代码</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*255),1,0)&#125;</span><br></pre></td></tr></table></figure></div>
 
             </div>
             
@@ -223,7 +187,7 @@ More info: Deployment
         <div class="post-copyright__type">
             <span class="post-copyright-meta">文章链接: </span>
               <span class="post-copyright-info">
-                <a href="https://blog.lete114.top/article/hello-world.html" one-link-mark="yes">https://blog.lete114.top/article/hello-world.html</a>
+                <a href="https://blog.lete114.top/article/SpringBoot-Thymeleaf-Random.html" one-link-mark="yes">https://blog.lete114.top/article/SpringBoot-Thymeleaf-Random.html</a>
               </span>
         </div><div class="post-copyright__notice">
             <span class="post-copyright-meta">版权声明: </span>
@@ -237,6 +201,32 @@ More info: Deployment
     
 
             
+            
+            <div class="post-tag">
+                <span>
+                    <i class="fa fa-tag"></i>
+                     
+                    <a href="tags/记录/"><span>记录</span></a>
+                        
+                            <i class="fas fa-angle-right"></i>
+                        
+                     
+                    <a href="tags/Java/"><span>Java</span></a>
+                        
+                            <i class="fas fa-angle-right"></i>
+                        
+                     
+                    <a href="tags/SpringBoot/"><span>SpringBoot</span></a>
+                        
+                            <i class="fas fa-angle-right"></i>
+                        
+                     
+                    <a href="tags/Thymeleaf/"><span>Thymeleaf</span></a>
+                        
+                    
+                </span>
+            </div>
+
             
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
@@ -309,7 +299,7 @@ socialShare('.social-share', $config);
                 hash: false
             });
 
-            $("#body-wrap").after('<div id="toc">'+tocTitle+'<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol></div>');
+            $("#body-wrap").after('<div id="toc">'+tocTitle+'</div>');
         </script>
 
         <section id="rightside">
@@ -328,12 +318,17 @@ socialShare('.social-share', $config);
 
         <div class="pagination">
             
-            <a href="/article/35939.html" class="page-pre">
+            <a href="/article/Java-random-num.html" class="page-pre">
                 <i class="fas fa-arrow-alt-circle-left"></i>
-                【教程】Git下载、安装
+                Java获取两个数之间的随机数
             </a>
             
             
+            
+            <a href="/article/SpringBoot-MyBatis-error-null.html" class="page-next">
+                SpringBoot-MyBatis报空指针
+                <i class="fas fa-arrow-alt-circle-right"></i>
+            </a>
             
         </div>
 

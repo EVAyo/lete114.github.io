@@ -120,6 +120,176 @@
 	
         <div class="post-item">
             <div class="post-title">
+                <h2><a href="/article/3a86607d.html">Hexo-abbrlink博客URL持久化、优化</a></h2>
+            </div>
+            <div class="post-description">
+                <p style="-webkit-line-clamp: 3">
+                    
+                    前言为什么要优化URL？
+
+对搜索引擎比较友好
+URL缩短
+
+Hexo默认的都是年/月/日/md的标题localhost:4000/2020/06/10/hello-world/
+方式一URL优化前：
+URL优化后：
+
+  弊端：上方的文章标题是 hello-world，是没多大区别，如果文章标题含有中文
+
+
+
+方式二(推荐)安装 hexo-abbrlink 插件：
+1npm install hexo-abbrlink --save
+在C:\Hexo-Blog\_config.yml中找到permalink注释掉，加入如下代码
+12345678910111213#permalink: :year/:month/:day/:title/permalink: article/:abbrlink.html# abbrlink configabbrlink:  alg: crc32  #support crc16(default) and crc32  rep: hex    #support dec(default) and hex  drafts: false #(true)Process
+                </p>
+            </div>
+            
+                
+                    <img src="https://cdn.jsdelivr.net/gh/lete114/CDN/BoBoPic/08.jpg" class="cover" alt="封面">
+                
+            
+
+            <div class="post-footer">
+                <!-- 发布时间 -->
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>发表于</span>
+                        <span>2020-06-24</span>
+                    </span>
+                </div>
+                <!-- 标签 -->
+                
+                    <div class="post-tag">
+                        <span>
+                            <i class="fa fa-tag"></i>
+                             
+                            <span>
+                                <a href="tags/教程/">
+                                    <span>教程</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/SEO/">
+                                    <span>SEO</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/Hexo/">
+                                    <span>Hexo</span>
+                                </a>
+                                
+                            </span>
+                            
+                        </span>
+                    </div>
+                
+                <!-- 分类 -->
+                
+            </div>
+        </div>
+
+
+
+
+	
+        <div class="post-item">
+            <div class="post-title">
+                <h2><a href="/article/da1d5c8b.html">LeanCloud因流控原因的解决办法</a></h2>
+            </div>
+            <div class="post-description">
+                <p style="-webkit-line-clamp: 3">
+                    
+                    前言前段时间很多人都遇到因流控原因，通过定时任务唤醒体验版实例失败，建议升级至标准版云引擎实例避免休眠，我也不例外，于是在网上查一下有没有解决办法，还真有几个，分别是
+
+
+cron-job
+GitHub+Actions
+Ajax请求唤醒
+
+
+之前我使用的是GitHub+Actions,当时我也不知道这玩意儿是啥(刚接触Github)，就照着教程走一遍，过程中也是遇到很多问题，我觉得这个对小白不是很友好，后来想用Ajax请求唤醒，但我没有那么做，还是坚持使用了GitHub+Actions直到最近我发现我的GitHub+Actions已经抱错5天了
+于是我经过尝试，用云监控系统也能唤醒LeanCloud(之前搭建过秒赞网，而秒赞网是需要监控的，有一些了解)于是我就用秒赞网的监控系统尝试了一下，果真可以
+
+考虑到秒赞网频繁使用基本上是3~10秒执行好几次，随后我就换了腾讯云监控，但是腾讯云监控页面我看不懂，想着腾讯云都有监控系统，阿里因该也有，就上阿里云查了一下。也有，页面看上去比腾讯云的易懂。
+cron-job缺点
+
+页面全英文(这个不重要)
+需要配置的选项多
+
+
+Ajax请求唤醒 - 缺
+                </p>
+            </div>
+            
+                
+                    <img src="https://cdn.jsdelivr.net/gh/lete114/CDN/BoBoPic/06.jpg" class="cover" alt="封面">
+                
+            
+
+            <div class="post-footer">
+                <!-- 发布时间 -->
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>发表于</span>
+                        <span>2020-06-17</span>
+                    </span>
+                </div>
+                <!-- 标签 -->
+                
+                    <div class="post-tag">
+                        <span>
+                            <i class="fa fa-tag"></i>
+                             
+                            <span>
+                                <a href="tags/教程/">
+                                    <span>教程</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/Valine/">
+                                    <span>Valine</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/LeanCloud/">
+                                    <span>LeanCloud</span>
+                                </a>
+                                
+                            </span>
+                            
+                        </span>
+                    </div>
+                
+                <!-- 分类 -->
+                
+            </div>
+        </div>
+
+
+
+
+	
+        <div class="post-item">
+            <div class="post-title">
                 <h2><a href="/article/45a2a677.html">腾讯云静态网站托管、托管静态博客(Hexo)(云开发 CloudBase)</a></h2>
             </div>
             <div class="post-description">
@@ -362,183 +532,9 @@ Coding Pages缺点
 
 
 
-	
-        <div class="post-item">
-            <div class="post-title">
-                <h2><a href="/article/dac3150c.html">实用软件</a></h2>
-            </div>
-            <div class="post-description">
-                <p style="-webkit-line-clamp: 3">
-                    
-                    前言仅仅是为了记录自己使用过的一些实用软件，怕自己哪天找不回来了
-🍀 免费且没有官网的我会提供下载地址(可联系删除。邮箱：lete@lete114.top)
-✅ 表示在用💗  表示收藏，不常用❎ 表示用过，现在不用
-软件Lete乐特自制实用工具✅ C# 显示鼠标当前RGB、HEX值 相关文章✅ C# 删除空文件夹 相关文章✅ Java 显示鼠标坐标工具 下载地址✅ Java 显示鼠标当前RGB、HEX值、坐标 相关文章
-Bandizip 解压缩 ✅ 官网：https://cn.bandisoft.com/
-
-
-
-
-
-ICO软件图标提取工具
-💗Lete乐特提供：https://656e-env-jxscvzag-1301289878.tcb.qcloud.la/Tools/Extractor.exe
-
- 
-
-
-FSCapture V9.3 CH V8 便携版单文件
-💗Lete乐特提供：https://656e-env-jxscvzag-1301289878.tcb.qcloud.la/Tools/FSCapture.exe
-
-
-
-
-Java反编译
-💗Lete乐特提供：https
-                </p>
-            </div>
-            
-                
-                    <img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io/img/Cover/Tools.png" class="cover" alt="封面">
-                
-            
-
-            <div class="post-footer">
-                <!-- 发布时间 -->
-                <div class="post-meta">
-                    <span class="post-date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>发表于</span>
-                        <span>2020-06-06</span>
-                    </span>
-                </div>
-                <!-- 标签 -->
-                
-                    <div class="post-tag">
-                        <span>
-                            <i class="fa fa-tag"></i>
-                             
-                            <span>
-                                <a href="tags/软件/">
-                                    <span>软件</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="tags/推荐/">
-                                    <span>推荐</span>
-                                </a>
-                                
-                            </span>
-                            
-                        </span>
-                    </div>
-                
-                <!-- 分类 -->
-                
-            </div>
-        </div>
-
-
-
-
-	
-        <div class="post-item">
-            <div class="post-title">
-                <h2><a href="/article/Butterfly-config-2.3.5.html">(废弃)Butterfly(蝴蝶)主题美化、优化2.3.5</a></h2>
-            </div>
-            <div class="post-description">
-                <p style="-webkit-line-clamp: 3">
-                    
-                    Butterfly 2.3.5 优化
-  本片文章是根据 Buteeryfly 主题 2.3.5 版本修改。Butterfly 主题于 2020-6-16 更新至 3.0.0-RC-1 版本 (此版本为小更新)
-
-
-
-     2.3.5 版本涉及到修改源码，如果你要升级主题的话，你请看上方其他版本的优化教程。
-
-
-本文所做的优化是我自己hexo init后，去Github上克隆Butterfly主题的稳定版，一步步在原主题基础上修改的保证了小白根据本片文章一步步操作，能够和我博客一样的效果
-修改头部导航栏修改前
-123456789101112131415161718# Main menu navigation# ---------------# format: xxx: 連結 || icon# sub-menu# xxx || icon:#   xxx || 連結 || iconmenu:  Home: / || fa fa-home  Archives: /archives/ || fa fa-archive  Tags: /tags/ || fa fa-tags  Categor
-                </p>
-            </div>
-            
-                
-                    <img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io@latest/img/Cover/Butterfly.png" class="cover" alt="封面">
-                
-            
-
-            <div class="post-footer">
-                <!-- 发布时间 -->
-                <div class="post-meta">
-                    <span class="post-date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>发表于</span>
-                        <span>2020-06-04</span>
-                    </span>
-                </div>
-                <!-- 标签 -->
-                
-                    <div class="post-tag">
-                        <span>
-                            <i class="fa fa-tag"></i>
-                             
-                            <span>
-                                <a href="tags/Butterfly/">
-                                    <span>Butterfly</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="tags/优化/">
-                                    <span>优化</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="tags/教程/">
-                                    <span>教程</span>
-                                </a>
-                                
-                            </span>
-                            
-                        </span>
-                    </div>
-                
-                <!-- 分类 -->
-                
-                    <div class="post-categorie">
-                        <span>
-                            <i class="fas fa-folder-open"></i>
-                             
-                            <span>
-                                <a href="categories/Butterfly/">
-                                    <span>Butterfly</span>
-                                </a>
-                                
-                            </span>
-                            
-                        </span>
-                    </div>
-                
-            </div>
-        </div>
-
-
-
-
 
     <div class="pagination">
-        <a class="extend prev" rel="prev" href="/page/5/"><i class='fas fa-chevron-left fa-fw'></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/"><i class='fas fa-chevron-right fa-fw'></i></a>
+        <a class="extend prev" rel="prev" href="/page/5/"><i class='fas fa-chevron-left fa-fw'></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/7/"><i class='fas fa-chevron-right fa-fw'></i></a>
     </div>
 
 

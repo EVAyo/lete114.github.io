@@ -6,60 +6,51 @@
 <meta http-equiv="content-language" content="zh-CN">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<title>Hello World | Lete乐特's Blog</title>
+<title>Java获取两个数之间的随机数 | Lete乐特's Blog</title>
 <link rel="icon" href="/img/favicon.ico">
-<meta name="keywords" content="">
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+<meta name="keywords" content="记录,Java">
+<meta name="description" content="查看Math类的源码可以看到random()返回的时double类型其范围是0.0-1.0
+基本类型：double 二进制位数：64包装类：java.lang.Double最小值：Double.MIN_VALUE=4.9E-324 （2的-1074次方）最大值：Double.MAX_VALUE=1.7976931348623157E308 （2的1024次方-1）
+如果直接乘20的话，这范围是0-20System.out.println(Math.random()*20);
+1234517.26800643538380718.24874738356354......省略16.4552680983059416.686627014227962
 
-More info: Writing
-Run server1$ hexo server
+转换int整型System.out.println((int)(Math.random()*20));
+12345651411....省略1814
 
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-" />
+获取两个数之间的随机数
+关键代码
+123456789101112131415161718package Test;public class Test &#123;	public static void" />
 <meta property="site_name" content="Lete乐特's Blog" />
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://blog.lete114.top/article/hello-world.html">
-<meta property="og:title" content="Hello World | Lete乐特's Blog" />
+<meta property="og:url" content="https://blog.lete114.top/article/Java-random-num.html">
+<meta property="og:title" content="Java获取两个数之间的随机数 | Lete乐特's Blog" />
 <meta property="og:site_name" content="Lete乐特's Blog" />
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+<meta property="og:description" content="查看Math类的源码可以看到random()返回的时double类型其范围是0.0-1.0
+基本类型：double 二进制位数：64包装类：java.lang.Double最小值：Double.MIN_VALUE=4.9E-324 （2的-1074次方）最大值：Double.MAX_VALUE=1.7976931348623157E308 （2的1024次方-1）
+如果直接乘20的话，这范围是0-20System.out.println(Math.random()*20);
+1234517.26800643538380718.24874738356354......省略16.4552680983059416.686627014227962
 
-More info: Writing
-Run server1$ hexo server
+转换int整型System.out.println((int)(Math.random()*20));
+12345651411....省略1814
 
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-" />
+获取两个数之间的随机数
+关键代码
+123456789101112131415161718package Test;public class Test &#123;	public static void" />
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World | Lete乐特's Blog">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+<meta name="twitter:title" content="Java获取两个数之间的随机数 | Lete乐特's Blog">
+<meta name="twitter:description" content="查看Math类的源码可以看到random()返回的时double类型其范围是0.0-1.0
+基本类型：double 二进制位数：64包装类：java.lang.Double最小值：Double.MIN_VALUE=4.9E-324 （2的-1074次方）最大值：Double.MAX_VALUE=1.7976931348623157E308 （2的1024次方-1）
+如果直接乘20的话，这范围是0-20System.out.println(Math.random()*20);
+1234517.26800643538380718.24874738356354......省略16.4552680983059416.686627014227962
 
-More info: Writing
-Run server1$ hexo server
+转换int整型System.out.println((int)(Math.random()*20));
+12345651411....省略1814
 
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-">
-<link rel="dns-prefetch" href="https://blog.lete114.top/article/hello-world.html">
+获取两个数之间的随机数
+关键代码
+123456789101112131415161718package Test;public class Test &#123;	public static void">
+<link rel="dns-prefetch" href="https://blog.lete114.top/article/Java-random-num.html">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
@@ -162,14 +153,14 @@ More info: Deployment
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
             <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
             <div class="post-title">
-              <h2 class="title">Hello World</h2>
+              <h2 class="title">Java获取两个数之间的随机数</h2>
             </div>
              
              <div class="post-meta">
                 <div class="meta-firstline">
                     <span class="post-meta-date">
                         <i class="far fa-calendar-alt fa-fw post-meta-icon"></i>
-                        <span class="post-meta-label">发表于 2020-04-15 | </span>
+                        <span class="post-meta-label">发表于 2021-01-18 | </span>
                         
                         <i class="fas fa-history fa-fw post-meta-icon"></i>
                         <span class="post-meta-label">更新于 2021-01-18</span>
@@ -179,12 +170,12 @@ More info: Deployment
                     <span class="post-meta-wordcount">
                         <i class="far fa-file-word fa-fw post-meta-icon"></i>
                         <span class="post-meta-label">字数总计:</span>
-                        <span class="word-count">75 | </span>
+                        <span class="word-count">217 | </span>
                         <i class="far fa-clock fa-fw post-meta-icon"></i>
                         <span class="post-meta-label">阅读时长:</span>
                         <span>1分钟 | </span>
                         <i class="far fa-eye fa-fw post-meta-icon"></i>
-                        <span id="/article/hello-world.html" class="leancloud_visitors">
+                        <span id="/article/Java-random-num.html" class="leancloud_visitors">
                             <span class="post-meta-label">阅读量:</span>
                             <span class="leancloud-visitors-count" id="twikoo_visitors">0</span>
                         </span>
@@ -193,19 +184,19 @@ More info: Deployment
             </div>
              
             <div class="post-content">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+                <p>查看<code>Math</code>类的源码可以看到<code>random()</code>返回的时<code>double</code>类型其范围是0.0-1.0</p>
+<p>基本类型：double 二进制位数：64<br>包装类：java.lang.Double<br>最小值：Double.MIN_VALUE=4.9E-324 （2的-1074次方）<br>最大值：Double.MAX_VALUE=1.7976931348623157E308 （2的1024次方-1）</p>
+<p>如果直接乘20的话，这范围是0-20<code>System.out.println(Math.random()*20);</code></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Code"><figure class="iseeu highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">17.268006435383807</span><br><span class="line">18.24874738356354</span><br><span class="line">......省略</span><br><span class="line">16.45526809830594</span><br><span class="line">16.686627014227962</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<p>转换int整型<code>System.out.println((int)(Math.random()*20));</code></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Code"><figure class="iseeu highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">14</span><br><span class="line">11</span><br><span class="line">....省略</span><br><span class="line">18</span><br><span class="line">14</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>获取两个数之间的随机数</p>
+<p>关键代码</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 设置 最大值 / 最小值</span></span><br><span class="line">		<span class="keyword">int</span> max=<span class="number">100</span>,min=<span class="number">50</span>;</span><br><span class="line">		<span class="comment">// 最大值减最小值</span></span><br><span class="line">		<span class="keyword">int</span> result=max-min;</span><br><span class="line">		<span class="comment">// 循环输出50个随机结果</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">50</span>; i++) &#123;</span><br><span class="line">			<span class="comment">// 获取到随机数</span></span><br><span class="line">			<span class="keyword">int</span> num = (<span class="keyword">int</span>) (Math.random()*result);</span><br><span class="line">			<span class="comment">// 随机数+最小数</span></span><br><span class="line">			<span class="keyword">int</span> randomResult = num+min;</span><br><span class="line">			System.out.print(randomResult+<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>结果</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Code"><figure class="iseeu highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">70</span><br><span class="line">70</span><br><span class="line">97</span><br><span class="line">.....省略</span><br><span class="line">74</span><br><span class="line">79</span><br><span class="line">90</span><br><span class="line">82</span><br></pre></td></tr></table></figure></div>
 
             </div>
             
@@ -223,7 +214,7 @@ More info: Deployment
         <div class="post-copyright__type">
             <span class="post-copyright-meta">文章链接: </span>
               <span class="post-copyright-info">
-                <a href="https://blog.lete114.top/article/hello-world.html" one-link-mark="yes">https://blog.lete114.top/article/hello-world.html</a>
+                <a href="https://blog.lete114.top/article/Java-random-num.html" one-link-mark="yes">https://blog.lete114.top/article/Java-random-num.html</a>
               </span>
         </div><div class="post-copyright__notice">
             <span class="post-copyright-meta">版权声明: </span>
@@ -237,6 +228,22 @@ More info: Deployment
     
 
             
+            
+            <div class="post-tag">
+                <span>
+                    <i class="fa fa-tag"></i>
+                     
+                    <a href="tags/记录/"><span>记录</span></a>
+                        
+                            <i class="fas fa-angle-right"></i>
+                        
+                     
+                    <a href="tags/Java/"><span>Java</span></a>
+                        
+                    
+                </span>
+            </div>
+
             
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
@@ -309,7 +316,7 @@ socialShare('.social-share', $config);
                 hash: false
             });
 
-            $("#body-wrap").after('<div id="toc">'+tocTitle+'<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol></div>');
+            $("#body-wrap").after('<div id="toc">'+tocTitle+'</div>');
         </script>
 
         <section id="rightside">
@@ -328,12 +335,11 @@ socialShare('.social-share', $config);
 
         <div class="pagination">
             
-            <a href="/article/35939.html" class="page-pre">
-                <i class="fas fa-arrow-alt-circle-left"></i>
-                【教程】Git下载、安装
+            
+            <a href="/article/SpringBoot-Thymeleaf-Random.html" class="page-next">
+                SpringBoot-Thymeleaf随机数
+                <i class="fas fa-arrow-alt-circle-right"></i>
             </a>
-            
-            
             
         </div>
 

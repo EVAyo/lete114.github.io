@@ -120,6 +120,189 @@
 	
         <div class="post-item">
             <div class="post-title">
+                <h2><a href="/article/4416be55.html">Hexo+yilia添加背景图片</a></h2>
+            </div>
+            <div class="post-description">
+                <p style="-webkit-line-clamp: 3">
+                    
+                    添加背景图片，效果图：见Lete乐特博客
+
+
+
+
+
+注：因为有博客不是修改时写的，部分代码没有进行备份，所以有些只能从git中获取代码，有些可能有点乱。
+同时因为每个人选的背景图片可能有所不同，主体颜色可能差异很大，需要调整的颜色可能比较多，这篇博客仅供参考，请自行选择是否替换背景。
+左侧边栏取消上半部分的背景颜色:themes/yilia/layout/_partial/left-col.ejs，如下：注释掉这行代码
+1&lt;!-- &lt;div class=&quot;overlay&quot; style=&quot;background: &lt;%= theme.style &amp;&amp; theme.style.header ? theme.style.header : defaultBg %&gt;&quot;&gt; --&gt;
+
+添加背景图片H:\Hexo\themes\yilia\source\main.0cf68a.css，注释掉原有的背景颜色，添加照片：
+123456789101112.left-col &#123;    /* background
+                </p>
+            </div>
+            
+                
+                    <img src="https://cdn.jsdelivr.net/gh/lete114/CDN/BoBoPic/11.jpg" class="cover" alt="封面">
+                
+            
+
+            <div class="post-footer">
+                <!-- 发布时间 -->
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>发表于</span>
+                        <span>2020-05-17</span>
+                    </span>
+                </div>
+                <!-- 标签 -->
+                
+                    <div class="post-tag">
+                        <span>
+                            <i class="fa fa-tag"></i>
+                             
+                            <span>
+                                <a href="tags/教程/">
+                                    <span>教程</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/Hexo/">
+                                    <span>Hexo</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/Yilia/">
+                                    <span>Yilia</span>
+                                </a>
+                                
+                            </span>
+                            
+                        </span>
+                    </div>
+                
+                <!-- 分类 -->
+                
+                    <div class="post-categorie">
+                        <span>
+                            <i class="fas fa-folder-open"></i>
+                             
+                            <span>
+                                <a href="categories/Hexo/">
+                                    <span>Hexo</span>
+                                </a>
+                                
+                            </span>
+                            
+                        </span>
+                    </div>
+                
+            </div>
+        </div>
+
+
+
+
+	
+        <div class="post-item">
+            <div class="post-title">
+                <h2><a href="/article/10238a85.html">Hexo+yilia添加APlayer音乐播放器</a></h2>
+            </div>
+            <div class="post-description">
+                <p style="-webkit-line-clamp: 3">
+                    
+                    之前写过一篇文章，是将APlayer音乐播放器放到左侧的（详见：hexo+yilia添加背景音乐），但是在手机端时，因为左侧边栏会被隐藏，因此也就会将播放器给隐藏掉。也就会是说手机端不能显示该播放器。
+这里换一种方式，直接添加到整个页面中，使其在手机端也能使用。
+
+
+
+说明1. 如果你第一次安装APlayer音乐播放器，我建议你先看一下上面的那篇文章（如果你不介意手机端不能使用，按照那篇文章来也是OK的😬），这里不再详细介绍APlayer。2. 如果你之前有按照我上面的文章进行配置，建议先删除之前的配置，不然可能会有冲突。
+安装步骤1.添加插件找到对应H:\Hexo\themes\yilia\layout\layout.ejs的文件，在&lt;body&gt;和 &lt;div id="container"之间添加：
+123456789101112131415161718192021222324252627&lt;!-- 《添加--APlayer音乐播放器,详见: https://aplayer.js.org/#/zh-Hans/ --&gt;&lt;% if(theme.aplay
+                </p>
+            </div>
+            
+                
+                    <img src="https://cdn.jsdelivr.net/gh/lete114/CDN/BoBoPic/15.jpg" class="cover" alt="封面">
+                
+            
+
+            <div class="post-footer">
+                <!-- 发布时间 -->
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>发表于</span>
+                        <span>2020-05-17</span>
+                    </span>
+                </div>
+                <!-- 标签 -->
+                
+                    <div class="post-tag">
+                        <span>
+                            <i class="fa fa-tag"></i>
+                             
+                            <span>
+                                <a href="tags/教程/">
+                                    <span>教程</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/Hexo/">
+                                    <span>Hexo</span>
+                                </a>
+                                
+                                    <i class="fas fa-angle-right"></i>
+                                
+                            </span>
+                             
+                            <span>
+                                <a href="tags/Yilia/">
+                                    <span>Yilia</span>
+                                </a>
+                                
+                            </span>
+                            
+                        </span>
+                    </div>
+                
+                <!-- 分类 -->
+                
+                    <div class="post-categorie">
+                        <span>
+                            <i class="fas fa-folder-open"></i>
+                             
+                            <span>
+                                <a href="categories/Hexo/">
+                                    <span>Hexo</span>
+                                </a>
+                                
+                            </span>
+                            
+                        </span>
+                    </div>
+                
+            </div>
+        </div>
+
+
+
+
+	
+        <div class="post-item">
+            <div class="post-title">
                 <h2><a href="/article/3bf7fb68.html">Hexo yilia主题隐藏&lt;!-- more --&gt;展开全部内容关键字</a></h2>
             </div>
             <div class="post-description">
@@ -458,197 +641,9 @@ Main.cs
 
 
 
-	
-        <div class="post-item">
-            <div class="post-title">
-                <h2><a href="/article/80b37818.html">推荐超好用的Google Chrome 谷歌浏览器，不仅支持下载mp3、mp4、mov、gif、png、还支持m3u8和很多图片、视频文件格式</a></h2>
-            </div>
-            <div class="post-description">
-                <p style="-webkit-line-clamp: 3">
-                    
-                    描述 资源来自Co2333这是一个Chrome扩展下载网站上的所有元素，它不仅支持mp3、mp4、mov、gif、png、还支持m3u8和很多图片、视频文件格式。
-
-
-屏幕截图汉化前
-汉化后
-下载地址曲奇云盘：https://quqi.gblhgk.com/s/47889/8owkaLgpVG3Pq3L8Github：https://github.com/lete114/GetThemAllGitee：https://gitee.com/lete114/GetThemAll
-这里顺便推荐个云盘曲奇云盘用了有几个月了还不错同样和百度云一样送2T空间，晚了可能就没有了，关键是不限速
-注意我不能确定这个插件是安全的，但这款插件是对我有帮助的
-声明：很明显我是没有许可的，那我为什么会把他发布出来呢？因为这款插件对我有帮助，但我英语水平不是很好.于是我就把它汉化了，并把其他语言文件删了，以节约C盘内存空间 (因为Google Chrome默认默认是安装在C盘的，我习惯把相关的文件放到软件的根目录下)官网似乎是http://getthemall.org/但貌似已经停止运营了如有侵权，请及时联系删除
-                </p>
-            </div>
-            
-                
-                    <img src="https://cdn.jsdelivr.net/gh/lete114/CDN/BoBoPic/01.jpg" class="cover" alt="封面">
-                
-            
-
-            <div class="post-footer">
-                <!-- 发布时间 -->
-                <div class="post-meta">
-                    <span class="post-date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>发表于</span>
-                        <span>2020-04-26</span>
-                    </span>
-                </div>
-                <!-- 标签 -->
-                
-                    <div class="post-tag">
-                        <span>
-                            <i class="fa fa-tag"></i>
-                             
-                            <span>
-                                <a href="tags/推荐/">
-                                    <span>推荐</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="tags/Google-Chrome/">
-                                    <span>Google Chrome</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="tags/谷歌插件/">
-                                    <span>谷歌插件</span>
-                                </a>
-                                
-                            </span>
-                            
-                        </span>
-                    </div>
-                
-                <!-- 分类 -->
-                
-                    <div class="post-categorie">
-                        <span>
-                            <i class="fas fa-folder-open"></i>
-                             
-                            <span>
-                                <a href="categories/插件/">
-                                    <span>插件</span>
-                                </a>
-                                
-                            </span>
-                            
-                        </span>
-                    </div>
-                
-            </div>
-        </div>
-
-
-
-
-	
-        <div class="post-item">
-            <div class="post-title">
-                <h2><a href="/article/986f7d9c.html">Java获取鼠标当前颜色RGB、获取鼠标当前HEX值、获取鼠标当前坐标(源码)</a></h2>
-            </div>
-            <div class="post-description">
-                <p style="-webkit-line-clamp: 3">
-                    
-                    Lete乐特自制实用工具(Java EE - JDK1.8)
-现在自己也是一名程序员了，想着以前用的都是别人打包好的exe文件，于是就动手自己写个吧？把RGB、HEX值、坐标、合并到一起自己用的也方便。
-
-
-
-
-XY.java
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139package io.github.lete114.tools;import javax.swing.*;import java.awt.*;import
-                </p>
-            </div>
-            
-                
-                    <img src="https://cdn.jsdelivr.net/gh/lete114/CDN/BoBoPic/06.jpg" class="cover" alt="封面">
-                
-            
-
-            <div class="post-footer">
-                <!-- 发布时间 -->
-                <div class="post-meta">
-                    <span class="post-date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>发表于</span>
-                        <span>2020-04-25</span>
-                    </span>
-                </div>
-                <!-- 标签 -->
-                
-                    <div class="post-tag">
-                        <span>
-                            <i class="fa fa-tag"></i>
-                             
-                            <span>
-                                <a href="tags/源码/">
-                                    <span>源码</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="tags/软件/">
-                                    <span>软件</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="tags/Java/">
-                                    <span>Java</span>
-                                </a>
-                                
-                            </span>
-                            
-                        </span>
-                    </div>
-                
-                <!-- 分类 -->
-                
-                    <div class="post-categorie">
-                        <span>
-                            <i class="fas fa-folder-open"></i>
-                             
-                            <span>
-                                <a href="categories/源码/">
-                                    <span>源码</span>
-                                </a>
-                                
-                                    <i class="fas fa-angle-right"></i>
-                                
-                            </span>
-                             
-                            <span>
-                                <a href="categories/源码/Java/">
-                                    <span>Java</span>
-                                </a>
-                                
-                            </span>
-                            
-                        </span>
-                    </div>
-                
-            </div>
-        </div>
-
-
-
-
 
     <div class="pagination">
-        <a class="extend prev" rel="prev" href="/page/9/"><i class='fas fa-chevron-left fa-fw'></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/11/"><i class='fas fa-chevron-right fa-fw'></i></a>
+        <a class="extend prev" rel="prev" href="/page/9/"><i class='fas fa-chevron-left fa-fw'></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/11/"><i class='fas fa-chevron-right fa-fw'></i></a>
     </div>
 
 
