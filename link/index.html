@@ -39,7 +39,7 @@ pre span {
     
     /*通过仓库pr修改link.yml方式*/
     $.get({
-        url: "https://cdn.jsdelivr.net/gh/lete114/CDN@latest/link.yml",
+        url: "https://bloglink.vercel.app/Link/link.yml",
         async:false,
         success: function(data){
             data = JSON.stringify(jsyaml.load(data))
