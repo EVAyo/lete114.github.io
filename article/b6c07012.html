@@ -46,6 +46,16 @@
 </div>
 
     
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?012e4ae3064a257c21a445df278cafe4";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
 
   
     <div style="display: flex;">
@@ -67,15 +77,15 @@
         
             <li><a href="/">首页</a></li>
         
-            <li><a href="/tags/">标签</a></li>
+            <li><a href="/tags">标签</a></li>
         
-            <li><a href="/categories/">分类</a></li>
+            <li><a href="/categories">分类</a></li>
         
-            <li><a href="/archives/">归档</a></li>
+            <li><a href="/archives">归档</a></li>
         
-            <li><a href="/link/">友情链接</a></li>
+            <li><a href="/link">友情链接</a></li>
         
-            <li><a href="/about/">关于我</a></li>
+            <li><a href="/about">关于我</a></li>
         
         </ul>
     </div>
@@ -83,15 +93,15 @@
     
         <li><a href="/">首页</a></li>
     
-        <li><a href="/tags/">标签</a></li>
+        <li><a href="/tags">标签</a></li>
     
-        <li><a href="/categories/">分类</a></li>
+        <li><a href="/categories">分类</a></li>
     
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/archives">归档</a></li>
     
-        <li><a href="/link/">友情链接</a></li>
+        <li><a href="/link">友情链接</a></li>
     
-        <li><a href="/about/">关于我</a></li>
+        <li><a href="/about">关于我</a></li>
     
     </ul>
 </nav>
@@ -133,7 +143,7 @@
                         <span class="post-meta-label">发表于 2020-05-28 | </span>
                         
                         <i class="fas fa-history fa-fw post-meta-icon"></i>
-                        <span class="post-meta-label">更新于 2021-01-18</span>
+                        <span class="post-meta-label">更新于 2021-01-22</span>
                     </span>
                 </div>
                 <div class="meta-secondline"> 
@@ -352,16 +362,86 @@ socialShare('.social-share', $config);
 </div>
             
         </article>
-        <script>
-            var tocTitle =`
-            <div id="toc-title">
-                <h4>目录
-                    <span id="num">0%</span>
-                </h4>
-                <progress id="progress" value="0" max="100"></progress>
-            </div>
-            `;
+        
+        
+        <style>
+            #body-wrap{
+                margin: 60px 0; 
+                margin-left: 300px;
+            }
+            
+            @media screen and (max-width: 1400px){
+                #body-wrap{
+                    margin: 60px 0;
+                    margin-left: 150px
+                }
+            }
 
+            @media screen and (max-width: 1300px){ 
+                #body-wrap{
+                    margin: 60px 0;
+                    margin-left: 60px
+                }
+            }
+            @media screen and (max-width: 1200px){
+                #toc{
+                    margin: 60px 10px 0
+                }
+                #body-wrap{
+                    margin: 60px 0 0 2%
+                }
+            }
+            @media screen and (max-width: 1100px){
+                .comment-head{
+                    padding: 0 20px 0 20px    
+                }
+            }
+            @media screen and (max-width: 1000px){
+                #toc{
+                    display: none;
+                    height: 250px ;
+                    position: fixed ;
+                    right: 35px;
+                    bottom: 30px ;
+                    top: 48%;
+                    z-index: 1000 ;
+                    width: 280px ;
+                    background: rgba(255,255,255,.9) ;
+                    margin: 0
+                }
+                .toc{
+                    max-height: 180px 
+                }
+                #body-wrap{
+                    margin: 60px auto 
+                }
+                .rightside-toc{
+                    display: inline-block !important
+                }
+            }
+
+            
+            @media screen and (max-width: 800px){
+                .comment-head{
+                    padding: 0 20px 30px 20px 
+                }
+            }
+
+            @media screen and (max-width: 600px){
+                .social-share {
+                    text-align: center;
+                    float: none;
+                    margin: 0
+                }
+            }
+                
+        </style>
+        
+        <script>
+            
+            setInterval(function(){
+                $('img#up').remove();
+            },0)
             
             setInterval(function(){
                 if(document.body.clientWidth < 800){
@@ -384,8 +464,19 @@ socialShare('.social-share', $config);
                 buttons: ['slideShow', 'fullScreen', 'thumbs', 'close'],
                 hash: false
             });
+            
+
+            var tocTitle =`
+            <div id="toc-title">
+                <h4>目录
+                    <span id="num">0%</span>
+                </h4>
+                <progress id="progress" value="0" max="100"></progress>
+            </div>
+            `;
 
             $("#body-wrap").after('<div id="toc">'+tocTitle+'<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96"><span class="toc-text">网站优化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Head-%E5%A4%B4%E9%83%A8%E4%BC%98%E5%8C%96"><span class="toc-text">Head 头部优化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%85%8D%E7%BD%AERobots-txt%E6%96%87%E4%BB%B6"><span class="toc-text">配置Robots.txt文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89404-html%E9%A1%B5%E9%9D%A2"><span class="toc-text">自定义404.html页面</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2-%E7%BD%91%E7%AB%99-%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6-%E6%97%B6%E9%97%B4"><span class="toc-text">博客(网站)加载速度(时间)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95"><span class="toc-text">百度收录</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E9%93%BE%E6%8E%A5%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F"><span class="toc-text">选择链接提交方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%8E%A8%E9%80%81"><span class="toc-text">设置推送</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81"><span class="toc-text">主动推送</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E2%80%9C%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E2%80%9D"><span class="toc-text">配置“百度主动推送”</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E6%8E%A8%E9%80%81"><span class="toc-text">如何进行推送</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81"><span class="toc-text">自动推送</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6sitemap%E6%8F%90%E4%BA%A4"><span class="toc-text">百度sitemap提交</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-text">效果</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google%E6%94%B6%E5%BD%95"><span class="toc-text">Google收录</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E3%80%81%E9%AA%8C%E8%AF%81"><span class="toc-text">添加网站、验证</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8Csitemap%E6%8F%90%E4%BA%A4"><span class="toc-text">谷歌sitemap提交</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%88%E6%9E%9C-1"><span class="toc-text">效果</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85-1"><span class="toc-text">补充</span></a></li></ol></div>');
+            
         </script>
 
         <section id="rightside">
@@ -428,7 +519,7 @@ socialShare('.social-share', $config);
                 
                     
 <div id="tcomment"></div>
-<script src="https://cdn.jsdelivr.net/npm/twikoo@0.5.1/dist/twikoo.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
 <script>
 initData = {
   el: '#tcomment',
@@ -470,7 +561,7 @@ twikoo.init(initData)
         <span>主题 </span>
         <a href="https://github.com/lete114/hexo-theme-MengD" target="_blank">MengD.(萌典) </a>
     </div>
-    <div class="custom-text">我相信我可以，但我一直在路上，所以我有无限的可能！！<br><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener" class="one-pan-link-mark"><img src="https://cdn.jsdelivr.net/gh/lete114/CDN/upyun/05.png" align="absmiddle" width="60px" height="30px">提供加速服务</a></div>
+    <div class="custom-text">我相信我可以，但我一直在路上，所以我有无限的可能！！</div>
 </footer>   
     <script src="/js/main.js"></script>
  

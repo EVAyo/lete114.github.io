@@ -52,6 +52,7 @@ var searchFunc = function(path, search_id, content_id) {
                                     if (i == 0) {
                                         first_occur = index_content;
                                     }
+                                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
                                 }
                             });
                         } else {

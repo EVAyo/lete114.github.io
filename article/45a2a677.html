@@ -39,7 +39,7 @@ Coding Pages缺点
 点击新建环境
 一定要点击免费资源一定要点击免费资源一定要点击免费资源
 
-等待初始化完成后点进去，选择静态网站托管—&gt;点击开启使用
+等待初始化完成后点进去，选择静态网站托管—&amp;gt;点击开启使用
 
 🚀唯一的缺点点击上传文件
 文件夹就只能一个个上传了，如果你有什么好多办法可以跟我分享🤞
@@ -82,7 +82,7 @@ Coding Pages缺点
 点击新建环境
 一定要点击免费资源一定要点击免费资源一定要点击免费资源
 
-等待初始化完成后点进去，选择静态网站托管—&gt;点击开启使用
+等待初始化完成后点进去，选择静态网站托管—&amp;gt;点击开启使用
 
 🚀唯一的缺点点击上传文件
 文件夹就只能一个个上传了，如果你有什么好多办法可以跟我分享🤞
@@ -123,7 +123,7 @@ Coding Pages缺点
 点击新建环境
 一定要点击免费资源一定要点击免费资源一定要点击免费资源
 
-等待初始化完成后点进去，选择静态网站托管—&gt;点击开启使用
+等待初始化完成后点进去，选择静态网站托管—&amp;gt;点击开启使用
 
 🚀唯一的缺点点击上传文件
 文件夹就只能一个个上传了，如果你有什么好多办法可以跟我分享🤞
@@ -157,6 +157,16 @@ Coding Pages缺点
 </div>
 
     
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?012e4ae3064a257c21a445df278cafe4";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
 
   
     <div style="display: flex;">
@@ -178,15 +188,15 @@ Coding Pages缺点
         
             <li><a href="/">首页</a></li>
         
-            <li><a href="/tags/">标签</a></li>
+            <li><a href="/tags">标签</a></li>
         
-            <li><a href="/categories/">分类</a></li>
+            <li><a href="/categories">分类</a></li>
         
-            <li><a href="/archives/">归档</a></li>
+            <li><a href="/archives">归档</a></li>
         
-            <li><a href="/link/">友情链接</a></li>
+            <li><a href="/link">友情链接</a></li>
         
-            <li><a href="/about/">关于我</a></li>
+            <li><a href="/about">关于我</a></li>
         
         </ul>
     </div>
@@ -194,15 +204,15 @@ Coding Pages缺点
     
         <li><a href="/">首页</a></li>
     
-        <li><a href="/tags/">标签</a></li>
+        <li><a href="/tags">标签</a></li>
     
-        <li><a href="/categories/">分类</a></li>
+        <li><a href="/categories">分类</a></li>
     
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/archives">归档</a></li>
     
-        <li><a href="/link/">友情链接</a></li>
+        <li><a href="/link">友情链接</a></li>
     
-        <li><a href="/about/">关于我</a></li>
+        <li><a href="/about">关于我</a></li>
     
     </ul>
 </nav>
@@ -244,7 +254,7 @@ Coding Pages缺点
                         <span class="post-meta-label">发表于 2020-06-16 | </span>
                         
                         <i class="fas fa-history fa-fw post-meta-icon"></i>
-                        <span class="post-meta-label">更新于 2021-01-18</span>
+                        <span class="post-meta-label">更新于 2021-01-22</span>
                     </span>
                 </div>
                 <div class="meta-secondline"> 
@@ -400,16 +410,86 @@ socialShare('.social-share', $config);
 </div>
             
         </article>
-        <script>
-            var tocTitle =`
-            <div id="toc-title">
-                <h4>目录
-                    <span id="num">0%</span>
-                </h4>
-                <progress id="progress" value="0" max="100"></progress>
-            </div>
-            `;
+        
+        
+        <style>
+            #body-wrap{
+                margin: 60px 0; 
+                margin-left: 300px;
+            }
+            
+            @media screen and (max-width: 1400px){
+                #body-wrap{
+                    margin: 60px 0;
+                    margin-left: 150px
+                }
+            }
 
+            @media screen and (max-width: 1300px){ 
+                #body-wrap{
+                    margin: 60px 0;
+                    margin-left: 60px
+                }
+            }
+            @media screen and (max-width: 1200px){
+                #toc{
+                    margin: 60px 10px 0
+                }
+                #body-wrap{
+                    margin: 60px 0 0 2%
+                }
+            }
+            @media screen and (max-width: 1100px){
+                .comment-head{
+                    padding: 0 20px 0 20px    
+                }
+            }
+            @media screen and (max-width: 1000px){
+                #toc{
+                    display: none;
+                    height: 250px ;
+                    position: fixed ;
+                    right: 35px;
+                    bottom: 30px ;
+                    top: 48%;
+                    z-index: 1000 ;
+                    width: 280px ;
+                    background: rgba(255,255,255,.9) ;
+                    margin: 0
+                }
+                .toc{
+                    max-height: 180px 
+                }
+                #body-wrap{
+                    margin: 60px auto 
+                }
+                .rightside-toc{
+                    display: inline-block !important
+                }
+            }
+
+            
+            @media screen and (max-width: 800px){
+                .comment-head{
+                    padding: 0 20px 30px 20px 
+                }
+            }
+
+            @media screen and (max-width: 600px){
+                .social-share {
+                    text-align: center;
+                    float: none;
+                    margin: 0
+                }
+            }
+                
+        </style>
+        
+        <script>
+            
+            setInterval(function(){
+                $('img#up').remove();
+            },0)
             
             setInterval(function(){
                 if(document.body.clientWidth < 800){
@@ -432,8 +512,19 @@ socialShare('.social-share', $config);
                 buttons: ['slideShow', 'fullScreen', 'thumbs', 'close'],
                 hash: false
             });
+            
+
+            var tocTitle =`
+            <div id="toc-title">
+                <h4>目录
+                    <span id="num">0%</span>
+                </h4>
+                <progress id="progress" value="0" max="100"></progress>
+            </div>
+            `;
 
             $("#body-wrap").after('<div id="toc">'+tocTitle+'<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Github-Pages%E7%BC%BA%E7%82%B9"><span class="toc-text">Github Pages缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gitee-Pages%E7%BC%BA%E7%82%B9"><span class="toc-text">Gitee Pages缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Coding-Pages%E7%BC%BA%E7%82%B9"><span class="toc-text">Coding Pages缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%85%BE%E8%AE%AF%E4%BA%91%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1-%E7%BC%BA%E7%82%B9"><span class="toc-text">腾讯云静态网站托管 - 缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%85%BE%E8%AE%AF%E4%BA%91%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1"><span class="toc-text">腾讯云静态网站托管</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9F%E5%BA%A6%E5%AF%B9%E6%AF%94"><span class="toc-text">速度对比</span></a></li></ol></div>');
+            
         </script>
 
         <section id="rightside">
@@ -476,7 +567,7 @@ socialShare('.social-share', $config);
                 
                     
 <div id="tcomment"></div>
-<script src="https://cdn.jsdelivr.net/npm/twikoo@0.5.1/dist/twikoo.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
 <script>
 initData = {
   el: '#tcomment',
@@ -518,7 +609,7 @@ twikoo.init(initData)
         <span>主题 </span>
         <a href="https://github.com/lete114/hexo-theme-MengD" target="_blank">MengD.(萌典) </a>
     </div>
-    <div class="custom-text">我相信我可以，但我一直在路上，所以我有无限的可能！！<br><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener" class="one-pan-link-mark"><img src="https://cdn.jsdelivr.net/gh/lete114/CDN/upyun/05.png" align="absmiddle" width="60px" height="30px">提供加速服务</a></div>
+    <div class="custom-text">我相信我可以，但我一直在路上，所以我有无限的可能！！</div>
 </footer>   
     <script src="/js/main.js"></script>
  

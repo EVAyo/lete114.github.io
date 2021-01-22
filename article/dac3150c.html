@@ -46,6 +46,16 @@
 </div>
 
     
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?012e4ae3064a257c21a445df278cafe4";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
 
   
     <div style="display: flex;">
@@ -67,15 +77,15 @@
         
             <li><a href="/">首页</a></li>
         
-            <li><a href="/tags/">标签</a></li>
+            <li><a href="/tags">标签</a></li>
         
-            <li><a href="/categories/">分类</a></li>
+            <li><a href="/categories">分类</a></li>
         
-            <li><a href="/archives/">归档</a></li>
+            <li><a href="/archives">归档</a></li>
         
-            <li><a href="/link/">友情链接</a></li>
+            <li><a href="/link">友情链接</a></li>
         
-            <li><a href="/about/">关于我</a></li>
+            <li><a href="/about">关于我</a></li>
         
         </ul>
     </div>
@@ -83,15 +93,15 @@
     
         <li><a href="/">首页</a></li>
     
-        <li><a href="/tags/">标签</a></li>
+        <li><a href="/tags">标签</a></li>
     
-        <li><a href="/categories/">分类</a></li>
+        <li><a href="/categories">分类</a></li>
     
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/archives">归档</a></li>
     
-        <li><a href="/link/">友情链接</a></li>
+        <li><a href="/link">友情链接</a></li>
     
-        <li><a href="/about/">关于我</a></li>
+        <li><a href="/about">关于我</a></li>
     
     </ul>
 </nav>
@@ -133,7 +143,7 @@
                         <span class="post-meta-label">发表于 2020-06-06 | </span>
                         
                         <i class="fas fa-history fa-fw post-meta-icon"></i>
-                        <span class="post-meta-label">更新于 2021-01-18</span>
+                        <span class="post-meta-label">更新于 2021-01-22</span>
                     </span>
                 </div>
                 <div class="meta-secondline"> 
@@ -437,16 +447,86 @@ socialShare('.social-share', $config);
 </div>
             
         </article>
-        <script>
-            var tocTitle =`
-            <div id="toc-title">
-                <h4>目录
-                    <span id="num">0%</span>
-                </h4>
-                <progress id="progress" value="0" max="100"></progress>
-            </div>
-            `;
+        
+        
+        <style>
+            #body-wrap{
+                margin: 60px 0; 
+                margin-left: 300px;
+            }
+            
+            @media screen and (max-width: 1400px){
+                #body-wrap{
+                    margin: 60px 0;
+                    margin-left: 150px
+                }
+            }
 
+            @media screen and (max-width: 1300px){ 
+                #body-wrap{
+                    margin: 60px 0;
+                    margin-left: 60px
+                }
+            }
+            @media screen and (max-width: 1200px){
+                #toc{
+                    margin: 60px 10px 0
+                }
+                #body-wrap{
+                    margin: 60px 0 0 2%
+                }
+            }
+            @media screen and (max-width: 1100px){
+                .comment-head{
+                    padding: 0 20px 0 20px    
+                }
+            }
+            @media screen and (max-width: 1000px){
+                #toc{
+                    display: none;
+                    height: 250px ;
+                    position: fixed ;
+                    right: 35px;
+                    bottom: 30px ;
+                    top: 48%;
+                    z-index: 1000 ;
+                    width: 280px ;
+                    background: rgba(255,255,255,.9) ;
+                    margin: 0
+                }
+                .toc{
+                    max-height: 180px 
+                }
+                #body-wrap{
+                    margin: 60px auto 
+                }
+                .rightside-toc{
+                    display: inline-block !important
+                }
+            }
+
+            
+            @media screen and (max-width: 800px){
+                .comment-head{
+                    padding: 0 20px 30px 20px 
+                }
+            }
+
+            @media screen and (max-width: 600px){
+                .social-share {
+                    text-align: center;
+                    float: none;
+                    margin: 0
+                }
+            }
+                
+        </style>
+        
+        <script>
+            
+            setInterval(function(){
+                $('img#up').remove();
+            },0)
             
             setInterval(function(){
                 if(document.body.clientWidth < 800){
@@ -469,8 +549,19 @@ socialShare('.social-share', $config);
                 buttons: ['slideShow', 'fullScreen', 'thumbs', 'close'],
                 hash: false
             });
+            
+
+            var tocTitle =`
+            <div id="toc-title">
+                <h4>目录
+                    <span id="num">0%</span>
+                </h4>
+                <progress id="progress" value="0" max="100"></progress>
+            </div>
+            `;
 
             $("#body-wrap").after('<div id="toc">'+tocTitle+'<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6"><span class="toc-text">软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lete%E4%B9%90%E7%89%B9%E8%87%AA%E5%88%B6%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-text">Lete乐特自制实用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bandizip-%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="toc-text">Bandizip 解压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ICO%E8%BD%AF%E4%BB%B6%E5%9B%BE%E6%A0%87%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7"><span class="toc-text">ICO软件图标提取工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FSCapture-V9-3-CH-V8-%E4%BE%BF%E6%90%BA%E7%89%88%E5%8D%95%E6%96%87%E4%BB%B6"><span class="toc-text">FSCapture V9.3 CH V8 便携版单文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E5%8F%8D%E7%BC%96%E8%AF%91"><span class="toc-text">Java反编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%97%A0%E6%8D%9F%E6%94%BE%E5%A4%A7"><span class="toc-text">图片无损放大</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AA%E4%BD%BF%E7%94%A8%E6%97%A0%E6%8D%9F%E6%94%BE%E5%A4%A7"><span class="toc-text">未使用无损放大</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%97%A0%E6%8D%9F%E6%94%BE%E5%A4%A7"><span class="toc-text">使用无损放大</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StartupSoundChanger"><span class="toc-text">StartupSoundChanger</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E5%91%86%E7%8C%AB%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA"><span class="toc-text">阿呆猫广告拦截</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%B1%E5%A5%87%E8%89%BA%E4%B8%87%E8%83%BD%E8%81%94%E6%92%AD"><span class="toc-text">爱奇艺万能联播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MSI-Afterburner-%E8%B6%85%E9%A2%91%E5%B7%A5%E5%85%B7"><span class="toc-text">MSI Afterburner(超频工具)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E6%96%87%E4%BB%B6%E5%B0%81%E8%A3%85%E5%B7%A5%E5%85%B7NSIS-packet-v1-0"><span class="toc-text">单文件封装工具NSIS_packet_v1.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%ADwin10%E7%B3%BB%E7%BB%9F%E7%A8%8B%E5%BA%8F-Eso%E4%BC%98%E5%8C%96"><span class="toc-text">关闭win10系统程序(Eso优化)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%81%AB%E7%BB%92%E5%AE%89%E5%85%A8"><span class="toc-text">火绒安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#snipaste%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7"><span class="toc-text">snipaste截图工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SpaceSniffer"><span class="toc-text">SpaceSniffer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%B2%81%E5%A4%A7%E5%B8%88"><span class="toc-text">鲁大师</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E6%96%87%E7%AB%A0%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD"><span class="toc-text">微信文章批量下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B3%E9%94%AE%E7%AE%A1%E7%90%86MenuMgr-1-1-20130514"><span class="toc-text">右键管理MenuMgr_1.1_20130514</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GetThemAll"><span class="toc-text">GetThemAll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quicker-%E7%A5%9E%E5%99%A8"><span class="toc-text">Quicker(神器)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E7%8A%B6%E6%80%81"><span class="toc-text">默认状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8A%B6%E6%80%81-%E8%BF%98%E5%8F%AF%E4%BB%A5%E6%94%AF%E6%8C%81%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6"><span class="toc-text">谷歌浏览器状态(还可以支持其他软件)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QTTabBar"><span class="toc-text">QTTabBar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WPS-Office-U%E7%9B%98%E7%89%88-%E4%BE%BF%E6%90%BA%E7%89%88-2019"><span class="toc-text">WPS Office  U盘版 便携版 2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DiffSync-%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8C%E6%AD%A5"><span class="toc-text">DiffSync(文件夹同步)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDM"><span class="toc-text">IDM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Visual-Studio-Code"><span class="toc-text">Visual Studio Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Geek"><span class="toc-text">Geek</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86"><span class="toc-text">启动项目管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auto-Dark-Mode"><span class="toc-text">Auto Dark Mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Typroa"><span class="toc-text">Typroa</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AdGuard"><span class="toc-text">AdGuard</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%87%E5%85%B4%E4%BF%AE%E5%A4%8D%E5%85%A8%E5%AE%B6%E6%A1%B6"><span class="toc-text">万兴修复全家桶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%9B%E9%9B%AA%E9%9F%B3%E4%B9%90%E5%8A%A9%E6%89%8B"><span class="toc-text">洛雪音乐助手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QuickLook"><span class="toc-text">QuickLook</span></a></li></ol></li></ol></div>');
+            
         </script>
 
         <section id="rightside">
@@ -513,7 +604,7 @@ socialShare('.social-share', $config);
                 
                     
 <div id="tcomment"></div>
-<script src="https://cdn.jsdelivr.net/npm/twikoo@0.5.1/dist/twikoo.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
 <script>
 initData = {
   el: '#tcomment',
@@ -555,7 +646,7 @@ twikoo.init(initData)
         <span>主题 </span>
         <a href="https://github.com/lete114/hexo-theme-MengD" target="_blank">MengD.(萌典) </a>
     </div>
-    <div class="custom-text">我相信我可以，但我一直在路上，所以我有无限的可能！！<br><a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener" class="one-pan-link-mark"><img src="https://cdn.jsdelivr.net/gh/lete114/CDN/upyun/05.png" align="absmiddle" width="60px" height="30px">提供加速服务</a></div>
+    <div class="custom-text">我相信我可以，但我一直在路上，所以我有无限的可能！！</div>
 </footer>   
     <script src="/js/main.js"></script>
  
