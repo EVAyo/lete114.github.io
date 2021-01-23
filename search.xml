@@ -275,7 +275,7 @@
 <h2 id="什么是M3U8、TS文件？"><a href="#什么是M3U8、TS文件？" class="headerlink" title="什么是M3U8、TS文件？"></a>什么是M3U8、TS文件？</h2><p><strong>M3U8</strong><br>M3U8是指UTF-8编码格式的M3U文件(M3U使用Latin-1字符集编码)<br>M3U文件是一个记录索引的纯文本文件，打开它时播放软件并不会播放它<br>而是根据它的索引找到对应的音视频文件的网络地址进行在线播放</p>
 <p><strong>TS</strong><br>ts是日本高清摄像机拍摄下进行的封装格式，全称为MPEG2-TS。ts即”Transport Stream”的缩写。<br>将一个视频文件(MP4)切片分为很多个TS文件，一个TS文件的视频时常可以自定义，比如切片为5秒<br>那么其他ts文件也是5秒，但是这个不是完全准确，也就是说会有误差，会产生4-7秒左右的ts视频文件</p>
 <p>那他是这么工作的呢？(以下图片是本地运行过程)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io@latest/img/jsdelivr-Video/m3u8-ts.png" alt="m3u8-ts"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io@latest/img/Jsdelivr-Video/m3u8-ts.png" alt="m3u8-ts"></p>
 <h2 id="ffmpeg-工具"><a href="#ffmpeg-工具" class="headerlink" title="ffmpeg 工具"></a>ffmpeg 工具</h2><p>什么是ffmpeg在这里我就不再赘述了，感兴趣的可以自行搜索</p>
 <p>了解了M3U8和TS，我该怎么把视频切片呢?<br>使用ffmpeg 工具进行切片</p>
 <p>官网：<a href="https://ffmpeg.org/download.html">https://ffmpeg.org/download.html</a></p>
@@ -291,8 +291,8 @@
 
 </li>
 </ol>
-<p>这是你的文件了会有如下图文件<br><img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io@latest/img/jsdelivr-Video/1.png" alt=""></p>
-<p>将这几个文件push到仓库即可<br><img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io@latest/img/jsdelivr-Video/2.png" alt=""></p>
+<p>这是你的文件了会有如下图文件<br><img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io@latest/img/Jsdelivr-Video/1.png" alt=""></p>
+<p>将这几个文件push到仓库即可<br><img src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io@latest/img/Jsdelivr-Video/2.png" alt=""></p>
 <p>现在访问是m3u8是不可以播放视频的(会自动下载对吧)<br><a href="https://cdn.jsdelivr.net/gh/lete114/CDN2/video/4.m3u8">https://cdn.jsdelivr.net/gh/lete114/CDN2/video/4.m3u8</a><br>访问文件也是不行的(乱码对吧)<br><a href="https://cdn.jsdelivr.net/gh/lete114/CDN2/video/4000.ts">https://cdn.jsdelivr.net/gh/lete114/CDN2/video/4000.ts</a></p>
 <h2 id="HLS技术"><a href="#HLS技术" class="headerlink" title="HLS技术"></a>HLS技术</h2><p>什么是HLS技术？</p>
 <p>HLS (HTTP Live Streaming)是Apple的动态码率自适应技术。主要用于PC和Apple终端的音视频服务。<br>包括一个m3u(8)的索引文件，TS媒体分片文件和key加密串文件。(摘抄自百度百科)</p>
