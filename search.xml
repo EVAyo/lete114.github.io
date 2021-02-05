@@ -1,6 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Git Pull 拉取的用法</title>
+    <url>/article/Git-Pull.html</url>
+    <content><![CDATA[<p>最近写<a href="https://github.com/lete114/hexo-theme-MengD">Hexo-MnegD(萌典)</a>主题老出现bug不得不使用这些Git指令<br>而且这些命令不常用，记不住，就记录一下</p>
+<blockquote>
+<p>其他于Git命令相关的文章</p>
+<ol>
+<li><a href="/article/Git-Merging.html">Git 解决 (master|MERGING)</a></li>
+<li><a href="/article/Git-Push-Reset.html">Git撤回Push到远程的代码</a></li>
+<li><a href="/article/Git-Merge.html">Git分支合并(dev合并到master)</a></li>
+</ol>
+</blockquote>
+<p>写法(其中<code>&lt;&gt;</code>只是为了标识)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master:master</span><br></pre></td></tr></table></figure></div>
+<p>将远程主机origin的master分支拉取下来，与本地的master分支合并。<br>后面的冒号可以省略(这种写法不推荐，为避免不必要的麻烦，还是补齐比较好)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure></div>]]></content>
+      <tags>
+        <tag>Github</tag>
+        <tag>Gitee</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git分支合并(dev合并到master)</title>
+    <url>/article/Git-Merge.html</url>
+    <content><![CDATA[<p>最近写<a href="https://github.com/lete114/hexo-theme-MengD">Hexo-MnegD(萌典)</a>主题老出现bug不得不使用这些Git指令<br>而且这些命令不常用，记不住，就记录一下</p>
+<blockquote>
+<p>其他于Git命令相关的文章</p>
+<ol>
+<li><a href="/article/Git-Merging.html">Git 解决 (master|MERGING)</a></li>
+<li><a href="/article/Git-Push-Reset.html">Git撤回Push到远程的代码</a></li>
+<li><a href="/article/Git-Pull.html">Git Pull 拉取的用法</a></li>
+</ol>
+</blockquote>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>当我们在<code>dev</code>分支中完成了项目的开发与测试，测试无bug后执行了如下命令</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m<span class="string">&#x27;提交代码&#x27;</span></span><br><span class="line">git push origin dev</span><br></pre></td></tr></table></figure></div>
+
+<p>那么如何将开发完成的代码合并到主分支(master)呢？</p>
+<h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><ol>
+<li>切换到主分支<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure></div></li>
+<li>如果你的项目是多人开发的话需要先<code>git pull</code>拉去代码，如果不是很了解的话上面我已推荐相关文章<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master:master</span><br></pre></td></tr></table></figure></div>
+如果远程分支是与当前分支合并，则冒号后面的部分可以省略。(不过我建议还是写全比较好，有可能会多出一些莫名其妙得问题)</li>
+<li>将dev分支得代码合并到主分支<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure></div>
+你可以执行<code>git status</code>查看状态，会得到如下提示(你的分支比<code>origin/master</code>分支早提交了1次)<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">On branch master</span><br><span class="line">Your branch is ahead of <span class="string">&#x27;origin/master&#x27;</span> by 1 commits.</span><br><span class="line">  (use <span class="string">&quot;git push&quot;</span> to publish your <span class="built_in">local</span> commits)</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure></div></li>
+<li>确认状态正常后执行push操作<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Github</tag>
+        <tag>Gitee</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git撤回Push到远程的代码</title>
+    <url>/article/Git-Push-Reset.html</url>
+    <content><![CDATA[<p>最近写<a href="https://github.com/lete114/hexo-theme-MengD">Hexo-MnegD(萌典)</a>主题老出现bug不得不使用这些Git指令<br>而且这些命令不常用，记不住，就记录一下</p>
+<blockquote>
+<p>其他于Git命令相关的文章</p>
+<ol>
+<li><a href="/article/Git-Merging.html">Git 解决 (master|MERGING)</a></li>
+<li><a href="/article/Git-Merge.html">Git分支合并(dev合并到master)</a></li>
+<li><a href="/article/Git-Pull.html">Git Pull 拉取的用法</a></li>
+</ol>
+</blockquote>
+<p>当我们已经把代码push到远程仓库后，突然发现了bug，这时候我们就需要代码回滚了</p>
+<p>执行<code>git log</code>命令</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Lete@Lete MINGW64 /d/Lete/GitHub/Hexo-Blog (blog)</span><br><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit 2f05bec11245b8b9b2355efc2abdfa9a8396db29 (HEAD -&gt; blog, origin/blog)</span><br><span class="line">Author: lete114 &lt;lete@lete114.top&gt;</span><br><span class="line">Date:   Thu Feb 4 21:13:33 2021 +0800</span><br><span class="line"></span><br><span class="line">    更新主题，修复部署时间长的bug</span><br><span class="line"></span><br><span class="line">commit a4ba2439ce6bdb7f6190b84579a88519ed555694</span><br><span class="line">Author: lete114 &lt;lete@lete114.top&gt;</span><br><span class="line">Date:   Thu Feb 4 20:23:35 2021 +0800</span><br><span class="line"></span><br><span class="line">    主题更新</span><br><span class="line"></span><br><span class="line"><span class="comment">## 下面还有就展示了</span></span><br></pre></td></tr></table></figure></div>
+<p>其中<code>commit 2f05bec11245b8b9b2355efc2abdfa9a8396db29 (HEAD -&gt; blog, origin/blog)</code>是当前提交的最新代码<br>往下<code>commit a4ba2439ce6bdb7f6190b84579a88519ed555694</code>就是之前或更早前提交的代码<br>选取其中commit后面的版本号<code>a4ba2439ce6bdb7f6190b84579a88519ed555694</code>执行如下命令即可回滚到<code>主题更新</code>这个版本了</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git reset --soft a4ba2439ce6bdb7f6190b84579a88519ed555694</span><br></pre></td></tr></table></figure></div>
+
+<p>这时由于本地的代码已回滚，已经和远程仓库代码版本不一致了，就得强制push才能推送(这个操作就完成了远程仓库代码的回滚了)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin master --force</span><br></pre></td></tr></table></figure></div>]]></content>
+      <tags>
+        <tag>Github</tag>
+        <tag>Gitee</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 解决 (master|MERGING)</title>
+    <url>/article/Git-Merging.html</url>
+    <content><![CDATA[<p>最近写<a href="https://github.com/lete114/hexo-theme-MengD">Hexo-MnegD(萌典)</a>主题老出现bug不得不使用这些Git指令<br>而且这些命令不常用，记不住，就记录一下</p>
+<blockquote>
+<p>其他于Git命令相关的文章</p>
+<ol>
+<li><a href="/article/Git-Merge.html">Git分支合并(dev合并到master)</a></li>
+<li><a href="/article/Git-Push-Reset.html">Git撤回Push到远程的代码</a></li>
+<li><a href="/article/Git-Pull.html">Git Pull 拉取的用法</a></li>
+</ol>
+</blockquote>
+<p>有时候在执行<code>git pull</code>之后出现<code>(master|MERGING)</code>(合并状态)</p>
+<p>该如何解决呢？</p>
+<p>解决办法如下</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git reset --hard head</span><br></pre></td></tr></table></figure></div>
+<p>执行pull得时候要带上远程主机名+远程分支:当前分支</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false"data-rel="Bash"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span></span><br><span class="line">git pull origin master:master</span><br></pre></td></tr></table></figure></div>
+<p>最后在执行push操作</p>
+]]></content>
+      <tags>
+        <tag>Github</tag>
+        <tag>Gitee</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PhotoShop批量抠图、批量抠GIF</title>
     <url>/article/PhotoShop-Batch.html</url>
     <content><![CDATA[<p>在几个月前就想写这这篇文章了，由于种种原因没时间写，现在放假了，就腾出时间写了<br>就是想记录以下。很少用到的东西，时间久了就会忘记，我不想未来的某一天当我要用到这个功能的时候，又要网上搜，很麻烦。</p>
