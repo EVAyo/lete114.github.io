@@ -1,3 +1,5 @@
+https://blog.lete114.top/article/Java-String-StringBuffer-StringBuilder.html
+https://blog.lete114.top/article/Java-Oracle-Open.html
 https://blog.lete114.top/article/Chrome-SplitScreen.html
 https://blog.lete114.top/article/Google-Voice-Protect.html
 https://blog.lete114.top/article/Maven-Package.html
