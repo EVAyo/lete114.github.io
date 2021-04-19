@@ -4,7 +4,7 @@
     <title>SpringBoot 获取配置文件内容</title>
     <url>/article/SpringBoot-Get-Config.html</url>
     <content><![CDATA[<p>在一些业务需求上，我们需要获取配置文件的某些配置内容，达到某种功能，<br>那么如何获取spingboot的配置参数内容呢？</p>
-<p>最常见的有两种方式</p>
+<p>最常见的有几种方式</p>
 <p>application.yml</p>
 <div class="highlight-wrap" data-rel="Yml"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 应用名称</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">    <span class="attr">application:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">springboot</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用服务 WEB 访问端口</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">8080</span></span><br></pre></td></tr></table></figure></div>
 
