@@ -3330,11 +3330,11 @@ if (Hls.isSupported()) {
 <p><img  src= "/img/load.gif" data-img="https://cdn.jsdelivr.net/gh/lete114/CDN/Sundry/Coding-404.png" alt="" ></p>
 <p>当时我查找内容教程的时候，百度一点有关Vercel的内容都没有，谷歌相关内容很少也就十几个页面内容左右，很遗憾没有关于自定义404页面的相关信息。</p>
 <p>最后我只能在官网查文档，查到后也是一脸懵逼<img  src= "/img/load.gif" data-img="https://cdn.jsdelivr.net/gh/drew233/cdn/20200409103906.webp" alt="" >)英文就算了，这谷歌翻译还正确，随后我在有道翻译得出个大概意思(其实就是文档写的太过于专业了)，我用的是<code>Hexo+yilia</code>主题，但Hexo主题多种多样，各个主题文件存放层次还不一样，自己琢磨了1个多小时得出结论：</p>
-<p>在<code>Hexo</code>项目下单<code>public</code>文件夹下创建<code>vercel.json</code>文件，内容如下</p>
+<p>在<code>Hexo</code>项目下的<code>source</code>文件夹下创建<code>vercel.json</code>文件，内容如下</p>
 <div class="highlight-wrap" data-rel="Json"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">&quot;routes&quot;</span>: [</span><br><span class="line">    &#123; <span class="attr">&quot;handle&quot;</span>: <span class="string">&quot;filesystem&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">&quot;src&quot;</span>: <span class="string">&quot;/(.*)&quot;</span>, <span class="attr">&quot;status&quot;</span>: <span class="number">404</span>, <span class="attr">&quot;dest&quot;</span>: <span class="string">&quot;/404.html&quot;</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p><strong>参考官方文档：<a href="https://vercel.com/docs/configuration#routes/advanced/custom-404">https://vercel.com/docs/configuration#routes/advanced/custom-404</a></strong></p>
-<p>最后在<code>public</code>文件夹下丢个<code>404.html</code>页面</p>
+<p>最后在<code>source</code>文件夹下丢个<code>404.html</code>页面</p>
 <p>重新<code>Hexo g</code> 与 <code>Hexo d</code>部署即可</p>
 <h5 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h5><p><strong><a href="https://lete114.now.sh/错误网址">404</a></strong></p>
 <p><img  src= "/img/load.gif" data-img="https://cdn.jsdelivr.net/gh/lete114/CDN/Sundry/404.png" alt="" ></p>
