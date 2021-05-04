@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用Css实现与JavaScript相同的丝滑锚点滚动效果</title>
+    <url>/article/Css-Anchor-scroll.html</url>
+    <content><![CDATA[<p>曾经我认为网站的锚点滚动效果都是使用Javscript实现的，如果不用js实现的话就是一瞬间就跳转到了，用户体验较差<br>看了大部分网站都是用js实现的，直到我写了Hexo的<a href="https://mengd.js.org">Hexo-MengD(萌典)</a>主题后<br>了解到了很多前端更深层的一些知识，我才知道原来这种效果可以使用css实现，甚至只需要一行即可实现，而如果使用的是js实现的话，少则<code>50行</code>代码、多则<code>100+行</code>代码<br>现在就只需要一行css就能实现，而且css的效率是完全吊打js的</p>
+<div class="highlight-wrap" data-rel="Css"><span class="clipboard"><i class="fa fa-clipboard"></i></span><figure class="iseeu highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">    <span class="attribute">scroll-behavior</span>: smooth;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>就给html标签添加一个css属性样式就可以了，没了(是不是很震惊？)</p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vercel部署Typecho动态博客</title>
     <url>/article/Vercel-Deploy-Typecho.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>相信很多人会和我一样 what? Vercel什么时候能部署PHP了？我怎么不知道？(我都用Vercel一年了，我居然不知道，之前看Vercel官方文档是白看了)<br>直到最近几天，我在<a href="https://hexoplusplus.js.org/">HexoPlusPlus</a>官方群</p>
