@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML标签&lt;progress&gt; or &lt;meter&gt;进度条</title>
+    <title>HTML标签 progress or meter 进度条</title>
     <url>/article/HTML-progress-meter.html</url>
     <content><![CDATA[<p>有些有些情况下，我们在页面需要用到进度条</p>
 <p>如果手写的化还需要判断宽度、百分比等问题</p>
