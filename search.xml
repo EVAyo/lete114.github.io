@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>来聊聊NodeJS的path模块(详细教程)</title>
+    <title>来聊聊NodeJS的path模块</title>
     <url>/article/node-path.html</url>
     <content><![CDATA[<p>Node.js 的 path 模块提供了一些用于处理文件路径的小工具</p>
 <p>先简单的看一下path模块提供的方法</p>
