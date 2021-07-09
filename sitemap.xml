@@ -205,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://blog.lete114.top/article/Live2d-Config.html</loc>
-    
-    <lastmod>2021-07-09</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.lete114.top/article/Yilia-Pro-Config.html</loc>
     
     <lastmod>2021-07-09</lastmod>
@@ -241,13 +234,6 @@
   
   <url>
     <loc>https://blog.lete114.top/article/DouYin.html</loc>
-    
-    <lastmod>2021-07-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.lete114.top/article/Valine-LeanCloud-Config.html</loc>
     
     <lastmod>2021-07-09</lastmod>
     
@@ -332,6 +318,13 @@
   
   <url>
     <loc>https://blog.lete114.top/categories/index.html</loc>
+    
+    <lastmod>2021-07-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.lete114.top/article/JavaScript-ShallowClone-DeepClone.html</loc>
     
     <lastmod>2021-07-09</lastmod>
     
@@ -492,7 +485,21 @@
   </url>
   
   <url>
+    <loc>https://blog.lete114.top/article/Live2d-Config.html</loc>
+    
+    <lastmod>2021-07-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.lete114.top/article/Butterfly-config.html</loc>
+    
+    <lastmod>2021-07-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.lete114.top/article/Valine-LeanCloud-Config.html</loc>
     
     <lastmod>2021-07-09</lastmod>
     

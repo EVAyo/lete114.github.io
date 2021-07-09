@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.lete114.top/article/Valine-LeanCloud-Config.html</loc>
-    <lastmod>2021-07-09</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.lete114.top/article/Live2d-Config.html</loc>
-    <lastmod>2021-07-09</lastmod>
-  </url>
-  <url>
     <loc>https://blog.lete114.top/article/Maven-MyBatis.html</loc>
     <lastmod>2021-07-09</lastmod>
   </url>
@@ -297,6 +289,10 @@
     <lastmod>2021-07-09</lastmod>
   </url>
   <url>
+    <loc>https://blog.lete114.top/article/JavaScript-ShallowClone-DeepClone.html</loc>
+    <lastmod>2021-07-09</lastmod>
+  </url>
+  <url>
     <loc>https://blog.lete114.top/article/JavaScript-insertAdjacentHTML.html</loc>
     <lastmod>2021-07-09</lastmod>
   </url>
@@ -342,6 +338,14 @@
   </url>
   <url>
     <loc>https://blog.lete114.top/article/a337c870.html</loc>
+    <lastmod>2021-07-09</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.lete114.top/article/Valine-LeanCloud-Config.html</loc>
+    <lastmod>2021-07-09</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.lete114.top/article/Live2d-Config.html</loc>
     <lastmod>2021-07-09</lastmod>
   </url>
   <url>
