@@ -1,3 +1,5 @@
+https://blog.lete114.top/article/browser-window.name-property.html
+https://blog.lete114.top/article/arrows-common-function.html
 https://blog.lete114.top/article/Destructuring-assignment.html
 https://blog.lete114.top/article/axios-packaging.html
 https://blog.lete114.top/article/JavaScript-ShallowClone-DeepClone.html

@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JavaScript为什么会有name变量属性的问题</title>
+    <url>/article/browser-window.name-property.html</url>
+    <content><![CDATA[<p>相信很多细心的前端程序有都发现了这点，为什么window会有一个空字符串的name变量属性呢？</p>
+<p>那么这个name是用来干嘛呢？又有什么用呢？</p>
+<p>目前我还不知道有啥用，如果有找到的小伙伴可以在评论区留言<br>name是用来定义窗口昵称的，具体有什么用我也不清楚<br>并且还有两个name属性<code>window.top.name</code>(最顶层父窗体昵称)和<code>window.parent.name</code>(父窗体昵称)</p>
+<p>并且windwo.name这个属性会自动调用toSring()方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.name = <span class="number">123</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.name,<span class="keyword">typeof</span> <span class="built_in">window</span>.name) <span class="comment">// &#x27;123&#x27; string</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.name = <span class="literal">null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.name,<span class="keyword">typeof</span> <span class="built_in">window</span>.name) <span class="comment">// &#x27;null&#x27; string</span></span><br></pre></td></tr></table></figure>
+
+<p>当打开一个新页面是可以给这个新页面窗体定义window.name</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 第一个参数是url地址</span></span><br><span class="line"><span class="built_in">window</span>.open(<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;新页面窗体昵称&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>也可以使用a标签定义</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;./demo2.html&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">target</span>=<span class="string">&quot;新页面窗体昵称&quot;</span>&gt;</span>跳转到新页面<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后再新页面控制台打印window.name就是<code>新页面窗体昵称</code></p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>箭头函数与普通函数的区别</title>
+    <url>/article/arrows-common-function.html</url>
+    <content><![CDATA[<p>JavaScript中箭头函数与普通函数到底有什么区别？</p>
+<blockquote>
+<p>简单来说: 普通函数拥有自身的this，而箭头函数自身没有this</p>
+</blockquote>
+<p>箭头函数表达式(箭头函数)的语法比函数表达式(普通函数)更简洁，并且箭头函数没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
+<p>我们先来看看普通函数和箭头函数的语法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 普通函数</span></span><br><span class="line"><span class="comment">// 第一种: 函数声明</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">commonFn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 第二种: 函数表达式</span></span><br><span class="line"><span class="keyword">const</span> commonFn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">commonFn() <span class="comment">// 调用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="comment">// 第一种: 没有参数，填写一个圆括号</span></span><br><span class="line"><span class="keyword">const</span> arrowsFn = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 第二种价: 有一个参数，可以有圆括号，也可以没有圆括号</span></span><br><span class="line"><span class="keyword">const</span> arrowsFn = <span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> arrowsFn = <span class="function"><span class="params">data</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 第三种: 有一个参数以上，必须拥有括号否则error</span></span><br><span class="line"><span class="keyword">const</span> arrowsFn = <span class="function">(<span class="params">data,name,age</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 第四种: 有一个参数，并且只有一行代码需要返回时</span></span><br><span class="line"><span class="keyword">const</span> arrowsFn = <span class="function">(<span class="params">data</span>)=&gt;</span> data</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">const</span> arrowsFn = <span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line">&#125;</span><br><span class="line">arrowsFn()</span><br></pre></td></tr></table></figure>
+
+<p>没有单独的<code>this</code><br>在箭头函数出现之前，每一个新函数根据它是如何被调用的来定义这个函数的this值：</p>
+<ul>
+<li>如果该函数是一个构造函数，this指针指向一个新的对象</li>
+<li>在严格模式下的函数调用下，this指向undefined</li>
+<li>如果该函数是一个对象的方法，则它的this指针指向这个对象</li>
+</ul>
+<p>我们来看看一段代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;张三&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,<span class="built_in">this</span>.name) <span class="comment">// 输出：李四 张三</span></span><br><span class="line">&#125;</span><br><span class="line">test(<span class="string">&#x27;李四&#x27;</span>)</span><br><span class="line"><span class="comment">// 为什么会这样呢？这就要涉及到this指向的问题了</span></span><br><span class="line"><span class="comment">// 换个变量名你就能看懂了</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;张三&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">username</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(username,<span class="built_in">this</span>.name) <span class="comment">// 输出：李四 张三</span></span><br><span class="line">&#125;</span><br><span class="line">test(<span class="string">&#x27;李四&#x27;</span>)</span><br><span class="line"><span class="comment">// 为什么this要指向全局的name呢？</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;张三&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">username</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(username,<span class="built_in">this</span>.username) <span class="comment">// 输出：李四 undefined</span></span><br><span class="line">&#125;</span><br><span class="line">test(<span class="string">&#x27;李四&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>实际上this是根据一个原则指向的：谁调用我，我就指向谁<br>当我们调用<code>test(&#39;李四&#39;)</code>的时候其实是<code>window.test(&#39;李四&#39;)</code>所有才会导致this指向全局的<code>name</code>变量</p>
+<p>我们在看一段代码，你可能就会明白了(这里我就不绕弯了，直接使用不同的变量名)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> username = <span class="string">&#x27;李四&#x27;</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name: <span class="string">&#x27;张三&#x27;</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">    test: <span class="function"><span class="keyword">function</span>(<span class="params">uname</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(uname,<span class="built_in">this</span>.uname) <span class="comment">// 迪迦 undefined</span></span><br><span class="line">        <span class="built_in">console</span>.log(name,<span class="built_in">this</span>.name) <span class="comment">// &#x27;&#x27; 张三</span></span><br><span class="line">        <span class="built_in">console</span>.log(username,<span class="built_in">this</span>.username) <span class="comment">// 李四 undefined</span></span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params">uname</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(uname,<span class="built_in">this</span>.uname) <span class="comment">// undefined undefined</span></span><br><span class="line">            <span class="built_in">console</span>.log(name,<span class="built_in">this</span>.name) <span class="comment">// &#x27;&#x27; &#x27;&#x27;</span></span><br><span class="line">            <span class="built_in">console</span>.log(username,<span class="built_in">this</span>.username) <span class="comment">// 李四 李四</span></span><br><span class="line">        &#125;,<span class="number">500</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.test(<span class="string">&#x27;迪迦&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>解析：其中有6个输出，下面我就以1-6的形式进行对号解析(文字有点多，耐心阅读)</p>
+<blockquote>
+<p>首先说明以下，我们是通过obj来调用方法的(上面已经提到过，谁调用，this就指向谁)，所有这里的this是指向obj对象的</p>
+</blockquote>
+<ol>
+<li>调用方法时传入了一个<code>迪迦</code>的字符串，所有当我们输出uname的时候就会得到我们传入的迪迦<br>在obj里并没有uname所有才会输出<code>undefined</code></li>
+<li>开头已经说了，谁调用，指向谁，那为什么name会输出空字符串呢？<br>因为函数会向上查找内容直到window才会停止，如果window也没有的话则为<code>undefined</code>(注意是在声明的地方向上查找，而不是调用的地方上查找)，而window全局变量了是有一个name变量的并且内容为’’（空字符串）所有就找到了’’<br>第二个参数输出张山，原因是this指向obj的(obj调用了方法，所以this指向obj)</li>
+<li>输出<code>李四</code>因为当前方法内没有username变量，所以会向上查找，直到window<br>在obj里并没有username，所以输出undefined</li>
+<li>setTimeout方法是属于全局方法，其实默认是省略掉了window(window.setTimeout())<br>第一个输出参数：为什么不输出迪迦，而是undefined？<br>这个问题就比较刁钻了，由于setTimeout方法是window方法(全局方法)，那么在调用setTimeout方法的时候是window调用的(window.setTimeout())而setTimeout方法内定义了一个函数，并且需要一个函数为uname的参数，可并没有人传入这个方法传入任何内容，而方法内又要输出这个变量，所以它只能向上查找，可是window就是最后一层了，并且window并没有uname，所以输出undefined<br>第二个输出参数：全局变量并没有uname所以输出undefined</li>
+<li>为什么输出为两个’’(空字符串)，原因很简单，setTimeout是window全局方法，如果setTimeout内没有通过var name = ‘hi’或者通过调用其他方法的返回值的话，window全局变量种有一个name变量为’’（空字符串），你可以打开所有网站，输入控制台输入<code>console.log(window)</code>window全局变量中的确又name<code>console.log(window.name)</code>或者<code>console.log(name)</code>都会输出’’(空字符串)</li>
+<li>同第五个console.log的说法差不多，this指向window，并且会向上查询，所有会的到全局的username</li>
+</ol>
+<p>把普通函数改为箭头函数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> username = <span class="string">&#x27;李四&#x27;</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name: <span class="string">&#x27;张三&#x27;</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">    test: <span class="function">(<span class="params">uname</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(uname,<span class="built_in">this</span>.uname) <span class="comment">// 迪迦 undefined</span></span><br><span class="line">        <span class="built_in">console</span>.log(name,<span class="built_in">this</span>.name) <span class="comment">// &#x27;&#x27; &#x27;&#x27;</span></span><br><span class="line">        <span class="built_in">console</span>.log(username,<span class="built_in">this</span>.username) <span class="comment">// 李四 李四</span></span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">(<span class="params">uname</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(uname,<span class="built_in">this</span>.uname) <span class="comment">// undefined undefined</span></span><br><span class="line">            <span class="built_in">console</span>.log(name,<span class="built_in">this</span>.name) <span class="comment">// &#x27;&#x27; &#x27;&#x27;</span></span><br><span class="line">            <span class="built_in">console</span>.log(username,<span class="built_in">this</span>.username) <span class="comment">// 李四 李四</span></span><br><span class="line">        &#125;,<span class="number">500</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.test(<span class="string">&#x27;迪迦&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>解析: 这次解析我就不写那么多文字了，你只需要记住一点，箭头函数没有this，所有它会向上查找，直到window才会停下，如果window没有就返回undefined(下面的解析，重复的话我就不说了)</p>
+<blockquote>
+<p>注意：obj对象是没有this的，只有方法才会有this</p>
+</blockquote>
+<ol>
+<li>输出传入的参数<code>迪迦</code>。同第四个解析</li>
+<li>由于前面说过，window全部变量下有个name变量并且内容为’’空字符串</li>
+<li>由于obj没有this，箭头函数也没有，所有输出全局变量username的内容</li>
+<li>由于箭头函数没有this，所有它就会向上查找，obj也没有this，就找到了window，window没有就undefined</li>
+<li>同第二个解析</li>
+<li>同第三个解析</li>
+</ol>
+<p>关于window全局变量为什么会有name变量的问题：<a href="https://blog.lete114.top/article/browser-window.name-property.html">https://blog.lete114.top/article/browser-window.name-property.html</a></p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript中什么是解构赋值?</title>
     <url>/article/Destructuring-assignment.html</url>
     <content><![CDATA[<p>什么是解构赋值？</p>
