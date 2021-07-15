@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.lete114.top/link/index.html</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.lete114.top/messageboard/index.html</loc>
     
     <lastmod>2021-07-15</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://blog.lete114.top/tags/index.html</loc>
-    
-    <lastmod>2021-07-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.lete114.top/link/index.html</loc>
     
     <lastmod>2021-07-15</lastmod>
     
@@ -51,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://blog.lete114.top/article/Maven-Config.html</loc>
-    
-    <lastmod>2021-07-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.lete114.top/article/Hexo-MengD.html</loc>
     
     <lastmod>2021-07-15</lastmod>
@@ -72,21 +65,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lete114.top/article/da1d5c8b.html</loc>
-    
-    <lastmod>2021-07-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.lete114.top/article/45a2a677.html</loc>
-    
-    <lastmod>2021-07-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.lete114.top/article/dac3150c.html</loc>
     
     <lastmod>2021-07-15</lastmod>
     
@@ -115,6 +94,13 @@
   
   <url>
     <loc>https://blog.lete114.top/categories/index.html</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.lete114.top/article/call-apply-bind-distinction.html</loc>
     
     <lastmod>2021-07-15</lastmod>
     
@@ -394,6 +380,13 @@
   </url>
   
   <url>
+    <loc>https://blog.lete114.top/article/Maven-Config.html</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.lete114.top/article/IDEA-Maven-Config.html</loc>
     
     <lastmod>2021-07-15</lastmod>
@@ -450,7 +443,28 @@
   </url>
   
   <url>
+    <loc>https://blog.lete114.top/article/3a86607d.html</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.lete114.top/article/da1d5c8b.html</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.lete114.top/article/c68fd42d.html</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.lete114.top/article/dac3150c.html</loc>
     
     <lastmod>2021-07-15</lastmod>
     
@@ -563,13 +577,6 @@
   
   <url>
     <loc>https://blog.lete114.top/article/Butterfly-config.html</loc>
-    
-    <lastmod>2021-07-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.lete114.top/article/3a86607d.html</loc>
     
     <lastmod>2021-07-15</lastmod>
     
@@ -725,14 +732,14 @@
   </url>
   
   <url>
-    <loc>https://blog.lete114.top/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://blog.lete114.top/tags/Axios/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.lete114.top/tags/Axios/</loc>
+    <loc>https://blog.lete114.top/tags/%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.lete114.top/article/da1d5c8b.html</loc>
-    <lastmod>2021-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.lete114.top/article/Maven-Config.html</loc>
-    <lastmod>2021-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.lete114.top/article/dac3150c.html</loc>
-    <lastmod>2021-07-15</lastmod>
-  </url>
-  <url>
     <loc>https://blog.lete114.top/article/DouYin.html</loc>
     <lastmod>2021-07-15</lastmod>
   </url>
@@ -42,6 +30,10 @@
   </url>
   <url>
     <loc>https://blog.lete114.top/article/Hexo-MengD.html</loc>
+    <lastmod>2021-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.lete114.top/article/3a86607d.html</loc>
     <lastmod>2021-07-15</lastmod>
   </url>
   <url>
@@ -201,6 +193,10 @@
     <lastmod>2021-07-15</lastmod>
   </url>
   <url>
+    <loc>https://blog.lete114.top/article/call-apply-bind-distinction.html</loc>
+    <lastmod>2021-07-15</lastmod>
+  </url>
+  <url>
     <loc>https://blog.lete114.top/article/Git-Pull.html</loc>
     <lastmod>2021-07-15</lastmod>
   </url>
@@ -258,6 +254,18 @@
   </url>
   <url>
     <loc>https://blog.lete114.top/article/upyun-cdn-config.html</loc>
+    <lastmod>2021-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.lete114.top/article/da1d5c8b.html</loc>
+    <lastmod>2021-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.lete114.top/article/Maven-Config.html</loc>
+    <lastmod>2021-07-15</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.lete114.top/article/dac3150c.html</loc>
     <lastmod>2021-07-15</lastmod>
   </url>
   <url>
@@ -358,10 +366,6 @@
   </url>
   <url>
     <loc>https://blog.lete114.top/article/Hexo-add-CodeBlock.html</loc>
-    <lastmod>2021-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.lete114.top/article/3a86607d.html</loc>
     <lastmod>2021-07-15</lastmod>
   </url>
   <url>
