@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS单位你真的了解吗？</title>
+    <url>/article/CSS-units.html</url>
+    <content><![CDATA[<p>CSS常见单位：px、%、em、rem、vh、vw<br>全部单位：%、px、cm、mm、in、pt、pc、ch、em、 ex、rem、vh、vw、vmin、vmax</p>
+<p>本文主要内容只会讲解常见css单位，并不会过深的去探讨(学而用不到，很快就会忘记)</p>
+<table>
+<thead>
+<tr>
+<th>单位</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>px</td>
+<td>像素(Pixel)是相对长度单位，px是相对于显示器屏幕分辨率而言的单位</td>
+</tr>
+<tr>
+<td>%</td>
+<td>百分比</td>
+</tr>
+<tr>
+<td>em</td>
+<td>em的值并不是固定的，他会继承父级元素的大小</td>
+</tr>
+<tr>
+<td>rem</td>
+<td>rem是CSS3新增的一个相对单位（root em，根em）,表示rem会相对于html根元素，而em是相对于父元素</td>
+</tr>
+<tr>
+<td>vh</td>
+<td>视图窗口的高度(viewport heigth)</td>
+</tr>
+<tr>
+<td>vw</td>
+<td>视图窗口的宽度(viewport width)</td>
+</tr>
+</tbody></table>
+<p><code>1px</code>：是相对单位，不管窗体怎么变化，它都是定死的</p>
+<p><code>1%</code>：是相对单位，它是相对于父元素的百分比，举例：父元素宽度为100px，子元素设置50%，那么子元素是父元素的一半(50px)</p>
+<p><code>em</code>：是相对单位，它是相对于父元素的，举例：父元素字体大小为20px，子元素设置2em，那么子元素40px。如果直接在body里使用，而为修改过body的默认大小，那么html的默认大小是14px，如果写2em的话就是28px</p>
+<p><code>rem</code>：是相对单位，它是相对于根(root em)的缩写，相对于根元素的大小，与em不同的是em是相对与父元素指定的大小，而rem是相对于根元素大小</p>
+<p><code>vh</code>：是相对单位，它是相对与窗体高度(也就是浏览器显示区域的高度)，举例：如果你现在使用手机浏览，假设手机高200px,宽100px，那么1vh=20px，1vw=10px</p>
+<p><code>vw</code>：是相对单位，它是相对与窗体宽度(也就是浏览器显示区域的宽度)，举例：同上vh</p>
+]]></content>
+      <tags>
+        <tag>记录</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript中call()-apply()-bind()方法有什么不同？</title>
     <url>/article/call-apply-bind-distinction.html</url>
     <content><![CDATA[<p>首先我写的代码，基本上就不会用到这3个方法。。。</p>
@@ -606,7 +655,7 @@
 ]]></content>
       <tags>
         <tag>JavaScript</tag>
-        <tag>Css</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -4025,7 +4074,7 @@ if (Hls.isSupported()) {
         <category>CSS</category>
       </categories>
       <tags>
-        <tag>css</tag>
+        <tag>CSS</tag>
         <tag>web</tag>
         <tag>前端</tag>
       </tags>
